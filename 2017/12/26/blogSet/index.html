@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/blog/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言很多人都想拥有个人风格的博客，我也参考了很多小伙伴关于hexo搭建博客个性化设置的文章，我总结了以下比较实用的几点，希望对有需要的小伙伴能有所帮助我选用的是NexT:首先是这个主题的样式简洁大方，却又不失强大的功能。再者就是主题作者对此开源项目的维护较好，所以我选择了 NexT 主题。其中选择Scheme是Pisces，双栏 Scheme，小家碧玉似的清新，很清晰的结构，当然也可以根据个人喜好">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于博客的个性化设置">
+<meta property="og:url" content="https://congpanpan.github.io/blog/2017/12/26/blogSet/index.html">
+<meta property="og:site_name" content="Follow Your Heart">
+<meta property="og:description" content="前言很多人都想拥有个人风格的博客，我也参考了很多小伙伴关于hexo搭建博客个性化设置的文章，我总结了以下比较实用的几点，希望对有需要的小伙伴能有所帮助我选用的是NexT:首先是这个主题的样式简洁大方，却又不失强大的功能。再者就是主题作者对此开源项目的维护较好，所以我选择了 NexT 主题。其中选择Scheme是Pisces，双栏 Scheme，小家碧玉似的清新，很清晰的结构，当然也可以根据个人喜好">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-26T07:51:05.929Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于博客的个性化设置">
+<meta name="twitter:description" content="前言很多人都想拥有个人风格的博客，我也参考了很多小伙伴关于hexo搭建博客个性化设置的文章，我总结了以下比较实用的几点，希望对有需要的小伙伴能有所帮助我选用的是NexT:首先是这个主题的样式简洁大方，却又不失强大的功能。再者就是主题作者对此开源项目的维护较好，所以我选择了 NexT 主题。其中选择Scheme是Pisces，双栏 Scheme，小家碧玉似的清新，很清晰的结构，当然也可以根据个人喜好">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://congpanpan.github.io/blog/2017/12/26/blogSet/"/>
+
+
+
+
+
+  <title>关于博客的个性化设置 | Follow Your Heart</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Follow Your Heart</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Amy's blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/blog/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-guestbook"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life">
+          <a href="/blog/life" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-life"></i> <br />
+            
+            分享生活
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://congpanpan.github.io/blog/blog/2017/12/26/blogSet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从小妮">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/cpp.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Follow Your Heart">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">关于博客的个性化设置</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-26T13:47:38+08:00">
+                2017-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>很多人都想拥有个人风格的博客，我也参考了很多小伙伴关于hexo搭建博客个性化设置的文章，我总结了以下比较实用的几点，希望对有需要的小伙伴能有所帮助<br>我选用的是NexT:首先是这个主题的样式简洁大方，却又不失强大的功能。再者就是主题作者对此开源项目的维护较好，所以我选择了 NexT 主题。<br>其中选择Scheme是Pisces，双栏 Scheme，小家碧玉似的清新，很清晰的结构，当然也可以根据个人喜好进行选择</p>
+<h4 id="1-设置头像"><a href="#1-设置头像" class="headerlink" title="1.设置头像"></a>1.设置头像</h4><p>编辑主题配置文件， 修改字段 avatar， 值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
+<table>
+<thead>
+<tr>
+<th>地址</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完整的互联网 URI</td>
+<td><a href="http://example.com/avatar.png" target="_blank" rel="external">http://example.com/avatar.png</a></td>
+</tr>
+<tr>
+<td>站点内的地址</td>
+<td>将头像放置主题目录下的 source/uploads/ （新建 uploads 目录若不存在）配置为：avatar: /uploads/avatar.png或者 放置在 source/images/ 目录下配置为：avatar: /images/avatar.png    </td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-优化主题siderbar的头像"><a href="#2-优化主题siderbar的头像" class="headerlink" title="2.优化主题siderbar的头像"></a>2.优化主题siderbar的头像</h4><p>就是为主题siderbar头像添加圆形化旋转的效果。修改/themes/next/source/css/_common/components/sidebar/sidebar-author.styl 文件，我的整个 sidebar-author.styl 文件的代码如下，你可以直接复制这段代码去替换你这个文件中的所有代码。<br>  有一个注意事项，就是你要保证你的头像，也就是 avatar.jpg 这个图片是正方形，不是的话你要将其修改成正方形，这样才能通过样式将其展现为很好看的正圆，否则会是一个椭圆形。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line">.site-author-image &#123;</div><div class="line">  display: block;</div><div class="line">  margin: 0 auto;</div><div class="line">  padding: $site-author-image-padding;</div><div class="line">  max-width: $site-author-image-width;</div><div class="line">  height: $site-author-image-height;</div><div class="line">  border: $site-author-image-border-width solid $site-author-image-border-color;</div><div class="line"></div><div class="line">  /* 头像圆形 */</div><div class="line">  border-radius: 80px;</div><div class="line">  -webkit-border-radius: 80px;</div><div class="line">  -moz-border-radius: 80px;</div><div class="line">  box-shadow: inset 0 -1px 0 #333sf;</div><div class="line"></div><div class="line">  /* 设置循环动画 [animation: (play)动画名称 (2s)动画播放时长单位秒或微秒 (ase-out)动画播放的速度曲线为以低速结束 (1s)等待1秒然后开始动画 (1)动画播放次数(infinite为循环播放) ]*/</div><div class="line">  -webkit-animation: play 2s ease-out 1s 1;</div><div class="line">  -moz-animation: play 2s ease-out 1s 1;</div><div class="line">  animation: play 2s ease-out 1s 1;</div><div class="line"></div><div class="line">  /* 鼠标经过头像旋转360度 */</div><div class="line">  -webkit-transition: -webkit-transform 1.5s ease-out;</div><div class="line">  -moz-transition: -moz-transform 1.5s ease-out;</div><div class="line">  transition: transform 1.5s ease-out;</div><div class="line">&#125;</div><div class="line">img:hover &#123;</div><div class="line">  /* 鼠标经过停止头像旋转</div><div class="line">  -webkit-animation-play-state:paused;</div><div class="line">  animation-play-state:paused;*/</div><div class="line"></div><div class="line">  /* 鼠标经过头像旋转360度 */</div><div class="line">  -webkit-transform: rotateZ(360deg);</div><div class="line">  -moz-transform: rotateZ(360deg);</div><div class="line">  transform: rotateZ(360deg);</div><div class="line">&#125;</div><div class="line">/* Z 轴旋转动画 */</div><div class="line">@-webkit-keyframes play &#123;</div><div class="line">  0% &#123;</div><div class="line">    -webkit-transform: rotateZ(0deg);</div><div class="line">  &#125;</div><div class="line">  100% &#123;</div><div class="line">    -webkit-transform: rotateZ(-360deg);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">@-moz-keyframes play &#123;</div><div class="line">  0% &#123;</div><div class="line">    -moz-transform: rotateZ(0deg);</div><div class="line">  &#125;</div><div class="line">  100% &#123;</div><div class="line">    -moz-transform: rotateZ(-360deg);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">@keyframes play &#123;</div><div class="line">  0% &#123;</div><div class="line">    transform: rotateZ(0deg);</div><div class="line">  &#125;</div><div class="line">  100% &#123;</div><div class="line">    transform: rotateZ(-360deg);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">.site-author-name &#123;</div><div class="line">  margin: $site-author-name-margin;</div><div class="line">  text-align: $site-author-name-align;</div><div class="line">  color: $site-author-name-color;</div><div class="line">  font-weight: $site-author-name-weight;</div><div class="line">&#125;</div><div class="line">.site-description &#123;</div><div class="line">  margin-top: $site-description-margin-top;</div><div class="line">  text-align: $site-description-align;</div><div class="line">  font-size: $site-description-font-size;</div><div class="line">  color: $site-description-color;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="3-字体和颜色的设置"><a href="#3-字体和颜色的设置" class="headerlink" title="3.字体和颜色的设置"></a>3.字体和颜色的设置</h4><p>在 \themes\next\source\css_variables\custom.styl 文件中添加以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">// 标题，修改成你期望的字体族</div><div class="line">$font-family-headings = Georgia, sans</div><div class="line">// 修改成你期望的字体族</div><div class="line">$font-family-base = &quot;Microsoft YaHei&quot;, Verdana, sans-serif</div><div class="line">// 代码字体</div><div class="line">$code-font-family = &quot;Input Mono&quot;, &quot;PT Mono&quot;, Consolas, Monaco, Menlo, monospace</div><div class="line">// 正文字体的大小</div><div class="line">$font-size-base = 16px</div><div class="line">// 代码字体的大小</div><div class="line">$code-font-size = 14px</div><div class="line">// 代码块颜色</div><div class="line">$code-foreground = #dd0055</div><div class="line">// Background color for &lt;body&gt;</div><div class="line">$body-bg-color = #e7e5dc  //theme mist use #fdfdfd</div><div class="line">// text-color</div><div class="line">$text-color = #353535s</div></pre></td></tr></table></figure></p>
+<h4 id="4-为博客加上GitHub丝带"><a href="#4-为博客加上GitHub丝带" class="headerlink" title="4.为博客加上GitHub丝带"></a>4.为博客加上GitHub丝带</h4><p>如果是Next主题（其他主题也差不多），添加GitHub丝带：在themes\next\layout_layout.swig中加入相关代码，记得修改自己的链接。</p>
+<p>相关代码你可以在GitHub官方网站GitHub Ribbons上进行选择。</p>
+<h4 id="5-设置代码的高亮主题"><a href="#5-设置代码的高亮主题" class="headerlink" title="5. 设置代码的高亮主题"></a>5. 设置代码的高亮主题</h4><h4 id="6-如何设置「阅读全文」"><a href="#6-如何设置「阅读全文」" class="headerlink" title="6. 如何设置「阅读全文」"></a>6. 如何设置「阅读全文」</h4><p>在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。 NexT 提供三种方式来控制文章在首页的显示方式。 也就是说，在首页显示文章的摘录并显示 阅读全文 按钮，可以通过以下方法：</p>
+<ol>
+<li>在文章中使用 <a id="more"></a> 手动进行截断，Hexo 提供的方式 推荐</li>
+<li>在文章的 front-matter 中添加 description，并提供文章摘录</li>
+<li>自动形成摘要，在 主题配置文件 中添加：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">auto_excerpt:</div><div class="line">  enable: true</div><div class="line">  length: 150</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>默认截取的长度为 150 字符，可以根据需要自行设定</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="从小妮 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2017/12/15/cssGrid/" rel="next" title="CSS Grid 布局">
+                <i class="fa fa-chevron-left"></i> CSS Grid 布局
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/blog/images/cpp.jpg"
+                alt="从小妮" />
+            
+              <p class="site-author-name" itemprop="name">从小妮</p>
+              <p class="site-description motion-element" itemprop="description">用心生活，懂得感恩</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/congpanpan" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/2566216627/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="Weibo">
+                    
+                      <i class="fa fa-fw fa-globe"></i>Weibo</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-设置头像"><span class="nav-number">1.1.</span> <span class="nav-text">1.设置头像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-优化主题siderbar的头像"><span class="nav-number">1.2.</span> <span class="nav-text">2.优化主题siderbar的头像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-字体和颜色的设置"><span class="nav-number">1.3.</span> <span class="nav-text">3.字体和颜色的设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-为博客加上GitHub丝带"><span class="nav-number">1.4.</span> <span class="nav-text">4.为博客加上GitHub丝带</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-设置代码的高亮主题"><span class="nav-number">1.5.</span> <span class="nav-text">5. 设置代码的高亮主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-如何设置「阅读全文」"><span class="nav-number">1.6.</span> <span class="nav-text">6. 如何设置「阅读全文」</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">从小妮</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
