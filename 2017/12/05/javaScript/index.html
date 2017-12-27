@@ -87,12 +87,12 @@
 <meta property="og:site_name" content="Follow Your Heart">
 <meta property="og:description" content="前言　　最近在看你不知道的javaScript这本书，看书的过程中，有一个很明显的感觉就是自己懂得太少。javaScript既是一门充满吸引力，简单易用的语言，又是一门具有较多复杂微妙技术的语言。本着知其然知其所以然的精神，我对读完这本书做了一个简单的总结，不过很多东西要反复琢磨才能真正理解 1. 作用域是什么？ 　作用域是一套规则，用于确定在何处以及如何查找变量(标识符)。如果查找的目的是对变">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://congpanpan.github.io/blog/2017/12/05/javaScript/1.png">
-<meta property="og:updated_time" content="2017-12-27T02:25:17.984Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/congpanpan/congpanpan.github.io/master/images/javascript.png">
+<meta property="og:updated_time" content="2017-12-27T02:56:35.787Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你不知道的javaScript">
 <meta name="twitter:description" content="前言　　最近在看你不知道的javaScript这本书，看书的过程中，有一个很明显的感觉就是自己懂得太少。javaScript既是一门充满吸引力，简单易用的语言，又是一门具有较多复杂微妙技术的语言。本着知其然知其所以然的精神，我对读完这本书做了一个简单的总结，不过很多东西要反复琢磨才能真正理解 1. 作用域是什么？ 　作用域是一套规则，用于确定在何处以及如何查找变量(标识符)。如果查找的目的是对变">
-<meta name="twitter:image" content="https://congpanpan.github.io/blog/2017/12/05/javaScript/1.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/congpanpan/congpanpan.github.io/master/images/javascript.png">
 
 
 
@@ -417,7 +417,7 @@
       
 
       
-        <p><img src="1.png" alt=""></p>
+        <p><img src="https://raw.githubusercontent.com/congpanpan/congpanpan.github.io/master/images/javascript.png" alt=""></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　最近在看你不知道的javaScript这本书，看书的过程中，有一个很明显的感觉就是自己懂得太少。javaScript既是一门充满吸引力，简单易用的语言，又是一门具有较多复杂微妙技术的语言。本着知其然知其所以然的精神，我对读完这本书做了一个简单的总结，不过很多东西要反复琢磨才能真正理解</p>
 <h3 id="1-作用域是什么？"><a href="#1-作用域是什么？" class="headerlink" title="1. 作用域是什么？"></a>1. 作用域是什么？</h3><p> 　作用域是一套规则，用于确定在何处以及如何查找变量(标识符)。如果查找的目的是对变量的赋值，那么就会使用LHS查询；如果目的是获取变量的值，就会使用就会使用RHS查询。赋值操作符会导致LHS查询,=操作符或调用函数时传入参数的操作都会导致关联作用域的赋值操作。<br> 像var = 2这样的声明会被分解两个独立的步骤<br> 1.首先，var a在其作用域声明新变量，这是在最开始的阶段，也就是代码执行前进行<br> 2.接着，a = 2会查询(LHS查询)变量a并对其赋值<br> LHS和RHS查询都会在当前执行作用域开始，如果有需要，就会向上级作用域继续查找目标标识符，这样每次上升一级作用域，最后抵达全局作用域，无论找到或没找到都将停止</p>
 <h4 id="什么是LHS和RHS"><a href="#什么是LHS和RHS" class="headerlink" title="什么是LHS和RHS?"></a>什么是LHS和RHS?</h4><p>LHS和RHS的含义是赋值操作的左侧或右侧，但并不意味就是”=赋值操作符的左侧或右侧”<br>LHS可以理解为赋值操作的目标是谁。RHS可以理解为谁是赋值操作的源头</p>
