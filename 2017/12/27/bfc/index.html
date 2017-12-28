@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Follow Your Heart">
 <meta property="og:description" content="前言对于BFC的概念以及应用场景一直都不是很明白，今天着重去了解了一下，做了以下总结。 BFC的定义BFC（Block Formatting Context）直译为“块级格式化范围”。是 W3C CSS 2.1 规范中的一个概念，它决定了元素如何对其内容进行定位，以及与其他元素的关系和相互作用当涉及到可视化布局的时候，Block Formatting Context提供了一个环境，HTML元素在这">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-28T07:30:26.254Z">
+<meta property="og:updated_time" content="2017-12-28T09:34:51.489Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么是BFC?">
 <meta name="twitter:description" content="前言对于BFC的概念以及应用场景一直都不是很明白，今天着重去了解了一下，做了以下总结。 BFC的定义BFC（Block Formatting Context）直译为“块级格式化范围”。是 W3C CSS 2.1 规范中的一个概念，它决定了元素如何对其内容进行定位，以及与其他元素的关系和相互作用当涉及到可视化布局的时候，Block Formatting Context提供了一个环境，HTML元素在这">
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,565
+                  889
                 </span>
               
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  3
                 </span>
               
             </div>
@@ -435,16 +435,6 @@
 </li>
 </ol>
 <p>因此要解决margin重叠问题，只要让它们不在同一个BFC就行了，但是对于两个相邻元素来说，意义不大，没有必要给它们加个外壳，但是对于嵌套元素来说就很有必要了，只要把父元素设为BFC就可以了。这样子元素的margin就不会和父元素的margin发生重叠了。</p>
-<h4 id="CSS-网格布局具体实例"><a href="#CSS-网格布局具体实例" class="headerlink" title="CSS 网格布局具体实例"></a>CSS 网格布局具体实例</h4><p>如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;wrapper&quot;&gt;</div><div class="line">    &lt;div class=&quot;letter&quot;&gt;</div><div class="line">        A</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;div class=&quot;letter&quot;&gt;</div><div class="line">        B</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>首先，我们使用 font-size 和 color 设置这些字母的字体和颜色，然后使用诸如 align-items 和 justify-content 之类的 flexbox 属性将其居中。CSS Grid 没有替换 flexbox 属性，尽可能保留了它们的功能。我们甚至可以将这些属性与 CSS Grid 结合。但是现在先让我们回到这个 demo：<br><img src="" alt=""><br>在上面这个例子中，一个大的 div 又包含着两个 div ，它们默认属性是 display: block。接下来我们用 Grid layout 设置父类元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.wrapper &#123;</div><div class="line">  display: grid;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>完整的html和css代码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;wrapper&quot;&gt;</div><div class="line">  &lt;div class=&quot;letter&quot;&gt;</div><div class="line">    A</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;div class=&quot;letter&quot;&gt;</div><div class="line">    B</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">body,html &#123;</div><div class="line">  padding: 0;</div><div class="line">  margin: 0;</div><div class="line">&#125;</div><div class="line">.wrapper &#123;</div><div class="line">  display: grid;</div><div class="line">&#125;</div><div class="line">.letter &#123;</div><div class="line">  background-color: #0069b3;</div><div class="line">  display: flex;</div><div class="line">  justify-content: center;</div><div class="line">  align-items: center;</div><div class="line">  padding: 20px;</div><div class="line">  font-size: 70px;</div><div class="line">  color: white;</div><div class="line">  line-height: 1;</div><div class="line">  font-family: &apos;hobeaux-rococeaux-background&apos;, Helvetica;</div><div class="line">  font-weight: 200;</div><div class="line">  cursor: pointer;</div><div class="line">  transition: all .3s ease;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>则显示结果如下：<br><img src="" alt=""><br>事实上，想让我们的 grid 起作用，首先需要给它设置一个确切的行数和列数。在这个例子中，我们可以让两个字母并排排列：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.wrapper &#123;</div><div class="line">  display: grid;</div><div class="line">  grid-template-columns: 1fr 1fr;</div><div class="line">  grid-column-gap: 1px;</div><div class="line">  background-color: black;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>效果如下：<br><img src="" alt=""><br>首先我们用 grid-template-columns 创建了一个两列的网格，如果你以前没见过这样的，那 1fr 可能看起来比较奇怪 ，但它是有效的 CSS 单元，可以将每一列列为我们网格的一小部分。在这个例子中，意味着让两列等宽。<br>两列之间的黑线是 wrapper 勾勒的每个字母 div 的背景，因为我们将 grid-column-gap 设置为了 1px。通常，我们会设置更大的距离，尤其是对于两个相邻的文本框来说。但在本例中，1px 就足够了。<br>如果我们再添加两个新字母会怎样呢？我们应该怎么改变布局？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&apos;wrapper&apos;&gt;</div><div class="line">  &lt;div class=&apos;letter&apos;&gt;</div><div class="line">    A</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;div class=&apos;letter&apos;&gt;</div><div class="line">    B</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;div class=&apos;letter&apos;&gt;</div><div class="line">    C</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;div class=&apos;letter&apos;&gt;</div><div class="line">    D</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>加两个字母之后也没啥神奇的效果。加两个字母对网格没什么影响，为什么呢？因为我们已经将其设置成了两列，所以这两个字母的 div 直接被放在了它们下面，并且正好是 1fr宽：<br><img src="" alt=""><br>grid-column-gap 只用于列,要想实现A,C之间以及B,D之间也有1px的距离。需要设置grid-row-gap<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.wrapper &#123;</div><div class="line">  grid-column-gap: 1px;</div><div class="line">  grid-row-gap: 1px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>效果如下<br><img src="" alt=""></p>
-<h4 id="响应式网格如何实现"><a href="#响应式网格如何实现" class="headerlink" title="响应式网格如何实现"></a>响应式网格如何实现</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.wrapper &#123;</div><div class="line">  display: grid;</div><div class="line">  grid-template-columns: 1fr 1fr;</div><div class="line"></div><div class="line">  @media screen and (min-width: 500px) &#123;</div><div class="line">    grid-template-columns: 1fr 1fr 1fr;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  @media screen and (min-width: 800px) &#123;</div><div class="line">    grid-template-columns: 1fr 1fr 1fr 1fr;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="" alt=""></p>
 <p><a href="http://www.mamicode.com/info-detail-77362.html" target="_blank" rel="external"></a></p>
 
       
@@ -669,7 +659,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#BFC的定义"><span class="nav-number">1.1.</span> <span class="nav-text">BFC的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#怎样才能形成BFC"><span class="nav-number">1.2.</span> <span class="nav-text">怎样才能形成BFC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BFC的作用"><span class="nav-number">1.3.</span> <span class="nav-text">BFC的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS-网格布局具体实例"><span class="nav-number">1.4.</span> <span class="nav-text">CSS 网格布局具体实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#响应式网格如何实现"><span class="nav-number">1.5.</span> <span class="nav-text">响应式网格如何实现</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#BFC的定义"><span class="nav-number">1.1.</span> <span class="nav-text">BFC的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#怎样才能形成BFC"><span class="nav-number">1.2.</span> <span class="nav-text">怎样才能形成BFC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BFC的作用"><span class="nav-number">1.3.</span> <span class="nav-text">BFC的作用</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -703,7 +693,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.1k</span>
+    <span title="Site words total count">7.2k</span>
   
 </div>
 
